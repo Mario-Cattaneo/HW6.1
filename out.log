@@ -1,0 +1,484 @@
+ocamlbuild -Is util,x86,ll -package num -libs unix,str main.native -use-menhir -yaccflag --explain
++ /home/mario/.opam/4.13.1/bin/ocamlc.opt -config
++ /home/mario/.opam/4.13.1/bin/ocamldep.opt -modules backend.ml > backend.ml.depends
++ /home/mario/.opam/4.13.1/bin/ocamlc.opt -c -I /home/mario/.opam/4.13.1/lib/num -I x86 -I util -I ll -o backend.cmo backend.ml
++ /home/mario/.opam/4.13.1/bin/ocamlc.opt -c -I /home/mario/.opam/4.13.1/lib/num -I x86 -I util -I ll -o driver.cmo driver.ml
++ /home/mario/.opam/4.13.1/bin/ocamlc.opt -c -I /home/mario/.opam/4.13.1/lib/num -I x86 -I util -I ll -o gradedtests.cmo gradedtests.ml
++ /home/mario/.opam/4.13.1/bin/ocamlc.opt -c -I /home/mario/.opam/4.13.1/lib/num -I x86 -I util -I ll -o main.cmo main.ml
++ /home/mario/.opam/4.13.1/bin/ocamlopt.opt -c -I /home/mario/.opam/4.13.1/lib/num -I x86 -I util -I ll -o backend.cmx backend.ml
++ /home/mario/.opam/4.13.1/bin/ocamlopt.opt -c -I /home/mario/.opam/4.13.1/lib/num -I x86 -I util -I ll -o driver.cmx driver.ml
++ /home/mario/.opam/4.13.1/bin/ocamlopt.opt -c -I /home/mario/.opam/4.13.1/lib/num -I x86 -I util -I ll -o gradedtests.cmx gradedtests.ml
++ /home/mario/.opam/4.13.1/bin/ocamlopt.opt -c -I /home/mario/.opam/4.13.1/lib/num -I x86 -I util -I ll -o main.cmx main.ml
++ /home/mario/.opam/4.13.1/bin/ocamlopt.opt unix.cmxa str.cmxa -I /home/mario/.opam/4.13.1/lib/num /home/mario/.opam/4.13.1/lib/num/nums.cmxa -I ll -I util -I x86 ll/ll.cmx datastructures.cmx ll/llutil.cmx solver.cmx cfg.cmx alias.cmx constprop.cmx analysistests.cmx util/range.cmx ast.cmx astlib.cmx liveness.cmx util/platform.cmx x86/x86.cmx backend.cmx dce.cmx tctxt.cmx typechecker.cmx frontend.cmx parser.cmx lexer.cmx ll/llparser.cmx ll/lllexer.cmx opt.cmx registers.cmx driver.cmx util/assert.cmx gradedtests.cmx main.cmx -o main.native
+./main.native --test
+Running test solver / liveness analysis tests
+Running test alias analysis tests
+Running test dce optimization tests
+Running test constprop analysis tests
+Running test constprop optimization tests
+Running test ll regalloc correctness tests
+/usr/bin/ld: warning: /tmp/test_2191-780461.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2192-0cbc88.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2193-30dfb1.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2194-b2c22e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2195-fd9d87.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2196-27d957.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2197-1b9523.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2198-f8ce13.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2199-9bffa5.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2200-7660cc.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2201-4f4c81.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2202-1acc19.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2203-24864f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2204-c43d3f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2205-2ff4d5.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2206-8d18e1.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2207-26ed50.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2208-c5264d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2209-efb9b6.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2210-379239.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2211-ba7edb.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2212-39bf1c.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2213-c32235.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2214-1129b3.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2215-5f28d2.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2216-cfa8b8.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2217-db1caf.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2218-4dafb7.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2219-de0359.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2220-9aa1f1.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2221-55f1c5.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2222-2a52fb.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2223-1cdf32.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2224-ccd220.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2225-8712f2.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2226-d04313.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2227-f463d9.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2228-441c8a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2229-2246fc.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2230-5ef603.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2231-ddad1f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2232-d536a8.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2233-2caa61.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2234-1e5fdb.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2235-e6590a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2236-ccea4e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2237-ae4570.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2238-ba2c43.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2239-66c5c1.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2240-b665ca.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2241-60ad1e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2242-b86339.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2243-4cf79c.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2244-21f02e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2245-adfc40.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2246-9c6768.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2247-8deaa1.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2248-34c260.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+Running test oat regalloc correctness tests
+/usr/bin/ld: warning: /tmp/test_2249-6bf924.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2250-7a3ee2.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2251-847569.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2252-8f0862.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2253-a0273d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2254-6bb795.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2255-6508aa.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2256-cba5bb.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2257-c2e9a6.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2258-6f760d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2259-0cd7c9.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2260-9fc4b6.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2261-a4ca58.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2262-57e807.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2263-1e057f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2264-29964b.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2265-ee3325.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2266-869f61.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2267-552e6a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2268-a6a5ca.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2269-f0a4a9.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2270-ae3746.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2271-4cb787.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2272-6ca30f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2273-fdb21a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2274-0fb0bc.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2275-063aa0.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2276-ba7c8c.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2277-b3fb10.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2278-4aba1a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2279-1e5869.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2280-368fed.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2281-0edb1f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2282-dbfe43.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2283-f6325a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2284-8ff446.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2285-11575c.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2286-ad7319.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2287-62923d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2288-2b8e7b.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2289-c6ceaf.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2290-8dd2ea.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2291-83e709.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2292-7adb78.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2293-e25141.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2294-2361aa.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2295-27b08f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2296-fe2bf0.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2297-50cdcc.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2298-9327c7.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2299-68565f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2300-b7c9d2.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2301-8e8697.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2302-9688fe.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2303-83c424.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2304-c93673.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2305-b31697.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2306-f4ef45.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2307-160188.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2308-e1a7af.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2309-6af3e6.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2310-60370f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2311-447470.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2312-156cf5.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2313-191af2.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2314-713283.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2315-77b65d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2316-c147e6.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2317-8cdfec.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2318-59610f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2319-f91b67.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2320-6eadc8.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2321-a05d83.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2322-09615c.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2323-8ef664.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2324-e5a7e8.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2325-c85d7a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2326-7ba2ad.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2327-8545cb.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2328-e1906a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2329-f3712d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2330-18565e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2331-bd6e1e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2332-311468.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2333-06c289.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2334-63b38f.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2335-cd852e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2336-fdc482.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2337-d2ce38.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2338-e39533.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2339-6753af.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2340-309e0e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2341-5d15c2.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2342-78df1a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2343-5e514e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2344-28ef48.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2345-d1e1ce.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2346-2fb530.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2347-47c9ae.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2348-ae1832.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2349-c82628.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2350-2749fc.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2351-b3874d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2352-7b1058.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2353-8b7759.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2354-40090d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2355-4033af.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2356-71da95.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2357-bdfa16.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2358-2b8f71.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2359-b80309.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2360-ebaf9d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2361-598977.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2362-3b47c9.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2363-008a17.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2364-429bf4.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2365-15957e.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2366-98b949.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2367-0dbdf0.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2368-c5d037.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2369-0ef5da.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2370-bc5701.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2371-087536.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2372-4f449d.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2373-6caf4c.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2374-d60d52.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2375-0d372a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2376-984f0a.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+/usr/bin/ld: warning: /tmp/test_2377-e5de84.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+Running test oat regalloc quality tests
+
+solver / liveness analysis tests (10/10 points):
+  OK
+alias analysis tests (0/15 points)
+FAILED - alias: llprograms/analysis9.ll: Output differs at labels: body, end, guard in maps
+{_entry=_entry {%1=Unique, %2=Unique, %_store__82=UndefAlias, %_store__83=UndefAlias, %argv=MayAlias, %d0=UndefAlias}, body=body {%1=Unique, %2=Unique, %3=MayAlias, %4=UndefAlias, %5=MayAlias, %6=MayAlias, %7=UndefAlias, %8=MayAlias, %9=UndefAlias, %_store__82=MayAlias, %_store__83=MayAlias, %_store__86=UndefAlias, %_store__87=UndefAlias, %argv=MayAlias, %d0=MayAlias, %d1=UndefAlias, %d2=UndefAlias}, end=end {%1=Unique, %10=MayAlias, %2=Unique, %3=MayAlias, %4=UndefAlias, %5=MayAlias, %6=MayAlias, %7=UndefAlias, %8=MayAlias, %9=UndefAlias, %_store__82=MayAlias, %_store__83=MayAlias, %_store__86=UndefAlias, %_store__87=UndefAlias, %argv=MayAlias, %d0=MayAlias, %d1=UndefAlias, %d2=UndefAlias}, guard=guard {%1=Unique, %2=Unique, %3=MayAlias, %4=UndefAlias, %5=MayAlias, %6=MayAlias, %7=UndefAlias, %8=MayAlias, %9=UndefAlias, %_store__82=MayAlias, %_store__83=MayAlias, %_store__86=UndefAlias, %_store__87=UndefAlias, %argv=MayAlias, %d0=MayAlias, %d1=UndefAlias, %d2=UndefAlias}}
+{_entry=_entry {%1=Unique, %2=Unique, %argv=MayAlias}, body=body {%1=Unique, %2=Unique, %argv=MayAlias}, end=end {%1=Unique, %2=Unique, %argv=MayAlias}, guard=guard {%1=Unique, %2=Unique, %argv=MayAlias}}
+
+FAILED - alias: llprograms/analysis8.ll: Output differs at labels: _entry in maps
+{_entry=_entry {%_store__90=UndefAlias, %a=UndefAlias, %argv=MayAlias, %b=UndefAlias, %c=UndefAlias, %d=UndefAlias, %e=UndefAlias, %f=UndefAlias, %g=UndefAlias, %h=UndefAlias, %i=UndefAlias, %j=UndefAlias, %k=UndefAlias, %l=UndefAlias, %m=UndefAlias, %n=UndefAlias, %o=UndefAlias, %p=UndefAlias, %q=UndefAlias, %r=UndefAlias, %s=UndefAlias, %t=UndefAlias, %tmp1=Unique, %tmp2=MayAlias, %u=UndefAlias, %v=UndefAlias, %w=UndefAlias, %x=UndefAlias, %y=UndefAlias, %z=MayAlias}}
+{_entry=_entry {%argv=MayAlias, %tmp1=Unique}}
+
+FAILED - alias: llprograms/analysis7.ll: Output differs at labels: body, end, guard in maps
+{_entry=_entry {%1=UndefAlias, %2=Unique, %3=UndefAlias, %4=Unique, %_store__92=UndefAlias, %_store__93=UndefAlias, %argv=MayAlias}, body=body {%1=MayAlias, %2=Unique, %3=MayAlias, %4=Unique, %5=MayAlias, %6=UndefAlias, %7=MayAlias, %8=UndefAlias, %_store__92=MayAlias, %_store__93=MayAlias, %_store__96=UndefAlias, %argv=MayAlias}, end=end {%1=MayAlias, %2=Unique, %3=MayAlias, %4=Unique, %5=MayAlias, %6=UndefAlias, %7=MayAlias, %8=UndefAlias, %_store__92=MayAlias, %_store__93=MayAlias, %_store__96=UndefAlias, %argv=MayAlias}, guard=guard {%1=MayAlias, %2=Unique, %3=MayAlias, %4=Unique, %5=MayAlias, %6=UndefAlias, %7=MayAlias, %8=UndefAlias, %_store__92=MayAlias, %_store__93=MayAlias, %_store__96=UndefAlias, %argv=MayAlias}}
+{_entry=_entry {%2=Unique, %4=Unique, %argv=MayAlias}, body=body {%2=Unique, %4=Unique, %argv=MayAlias}, end=end {%2=Unique, %4=Unique, %argv=MayAlias}, guard=guard {%2=Unique, %4=Unique, %argv=MayAlias}}
+
+FAILED - alias: llprograms/analysis5.ll: Output differs at labels: _entry in maps
+{_entry=_entry {%1=UndefAlias, %2=UndefAlias, %3=MayAlias, %argv=MayAlias}}
+{_entry=_entry {%argv=MayAlias}}
+
+FAILED - alias: llprograms/analysis4.ll: Output differs at labels: l1, l2 in maps
+{_entry=_entry {%1=UndefAlias, %2=UndefAlias, %3=Unique, %_store__100=UndefAlias, %arcv=MayAlias}, l1=l1 {%1=MayAlias, %2=MayAlias, %3=Unique, %4=UndefAlias, %5=MayAlias, %6=MayAlias, %7=MayAlias, %8=UndefAlias, %9=UndefAlias, %_store__100=MayAlias, %_store__102=UndefAlias, %arcv=MayAlias}, l2=l2 {%1=MayAlias, %10=MayAlias, %2=MayAlias, %3=Unique, %4=UndefAlias, %5=MayAlias, %6=MayAlias, %7=MayAlias, %8=UndefAlias, %9=UndefAlias, %_store__100=MayAlias, %_store__102=UndefAlias, %arcv=MayAlias}}
+{_entry=_entry {%3=Unique, %arcv=MayAlias}, l1=l1 {%3=MayAlias, %6=MayAlias, %7=MayAlias, %arcv=MayAlias}, l2=l2 {%3=MayAlias, %6=MayAlias, %7=MayAlias, %arcv=MayAlias}}
+
+FAILED - alias: llprograms/analysis3.ll: Output differs at labels: lexit in maps
+{_entry=_entry {%1=UndefAlias, %arcv=MayAlias}, l2=l2 {%1=UndefAlias, %2=UndefAlias, %arcv=MayAlias}, l3=l3 {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %arcv=MayAlias}, l4=l4 {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %arcv=MayAlias}, l5=l5 {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %arcv=MayAlias}, l6=l6 {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %arcv=MayAlias}, l7=l7 {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %arcv=MayAlias}, l8=l8 {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %8=UndefAlias, %arcv=MayAlias}, l9=l9 {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %8=UndefAlias, %9=UndefAlias, %arcv=MayAlias}, lexit=lexit {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %8=UndefAlias, %9=MayAlias, %arcv=MayAlias}}
+{_entry=_entry {%arcv=MayAlias}, l2=l2 {%arcv=MayAlias}, l3=l3 {%arcv=MayAlias}, l4=l4 {%arcv=MayAlias}, l5=l5 {%arcv=MayAlias}, l6=l6 {%arcv=MayAlias}, l7=l7 {%arcv=MayAlias}, l8=l8 {%arcv=MayAlias}, l9=l9 {%arcv=MayAlias}, lexit=lexit {%arcv=MayAlias}}
+
+FAILED - alias: llprograms/analysis2.ll: Output differs at labels: l1 in maps
+{_entry=_entry {%1=UndefAlias, %2=UndefAlias, %3=Unique, %4=UndefAlias, %arcv=MayAlias}, l1=l1 {%1=MayAlias, %2=UndefAlias, %3=Unique, %4=UndefAlias, %5=MayAlias, %arcv=MayAlias}, l2=l2 {%1=UndefAlias, %2=UndefAlias, %3=Unique, %4=UndefAlias, %arcv=MayAlias}}
+{_entry=_entry {%3=Unique, %arcv=MayAlias}, l1=l1 {%3=MayAlias, %5=MayAlias, %arcv=MayAlias}, l2=l2 {%3=Unique, %arcv=MayAlias}}
+
+FAILED - alias: llprograms/analysis19.ll: Output differs at labels: _entry in maps
+{_entry=_entry {%1=Unique, %2=MayAlias, %3=MayAlias, %arcv=MayAlias}}
+{_entry=_entry {%1=Unique, %2=MayAlias, %arcv=MayAlias}}
+
+FAILED - alias: llprograms/analysis18.ll: Output differs at labels: foo in maps
+{_entry=_entry {%1=Unique, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %arcv=MayAlias}, bar=bar {%1=Unique, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %_store__120=UndefAlias, %_store__121=UndefAlias, %_store__122=UndefAlias, %arcv=MayAlias, %sa=Unique, %sb=Unique, %sc=Unique}, foo=foo {%1=Unique, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %_store__120=UndefAlias, %_store__121=UndefAlias, %_store__122=UndefAlias, %_store__124=UndefAlias, %arcv=MayAlias, %res=MayAlias, %sa=Unique, %sb=Unique, %sc=Unique, %v1=MayAlias, %v2=MayAlias, %v3=MayAlias, %v4=UndefAlias}}
+{_entry=_entry {%1=Unique, %arcv=MayAlias}, bar=bar {%1=Unique, %arcv=MayAlias, %sa=Unique, %sb=Unique, %sc=Unique}, foo=foo {%1=Unique, %arcv=MayAlias, %sa=Unique, %sb=Unique, %sc=Unique}}
+
+FAILED - alias: llprograms/analysis16.ll: Output differs at labels: continue_loop, else, foo, if, loop, reta, retb in maps
+{_entry=_entry {%1=Unique, %2=Unique, %_store__126=UndefAlias, %_store__127=UndefAlias, %arcv=MayAlias}, continue_loop=continue_loop {%1=Unique, %10=MayAlias, %2=Unique, %3=MayAlias, %4=MayAlias, %5=MayAlias, %6=UndefAlias, %7=MayAlias, %8=UndefAlias, %9=MayAlias, %_store__126=MayAlias, %_store__127=MayAlias, %_store__132=MayAlias, %_store__134=MayAlias, %arcv=MayAlias}, else=else {%1=Unique, %10=UndefAlias, %2=Unique, %3=MayAlias, %4=MayAlias, %5=MayAlias, %6=UndefAlias, %7=MayAlias, %8=UndefAlias, %9=MayAlias, %_store__126=MayAlias, %_store__127=MayAlias, %_store__132=MayAlias, %_store__134=UndefAlias, %arcv=MayAlias}, foo=foo {%1=Unique, %2=Unique, %3=MayAlias, %4=UndefAlias, %_store__126=UndefAlias, %_store__127=UndefAlias, %arcv=MayAlias}, if=if {%1=Unique, %10=MayAlias, %2=Unique, %3=MayAlias, %4=MayAlias, %5=MayAlias, %6=UndefAlias, %7=MayAlias, %8=UndefAlias, %9=UndefAlias, %_store__126=MayAlias, %_store__127=MayAlias, %_store__132=UndefAlias, %_store__134=MayAlias, %arcv=MayAlias}, loop=loop {%1=Unique, %10=MayAlias, %2=Unique, %3=MayAlias, %4=MayAlias, %5=MayAlias, %6=UndefAlias, %7=MayAlias, %8=MayAlias, %9=MayAlias, %_store__126=MayAlias, %_store__127=MayAlias, %_store__132=MayAlias, %_store__134=MayAlias, %arcv=MayAlias}, reta=reta {%1=Unique, %10=MayAlias, %11=MayAlias, %2=Unique, %3=MayAlias, %4=MayAlias, %5=MayAlias, %6=UndefAlias, %7=MayAlias, %8=MayAlias, %9=MayAlias, %_store__126=MayAlias, %_store__127=MayAlias, %_store__132=MayAlias, %_store__134=MayAlias, %arcv=MayAlias}, retb=retb {%1=Unique, %12=MayAlias, %2=Unique, %3=MayAlias, %4=UndefAlias, %_store__126=UndefAlias, %_store__127=UndefAlias, %arcv=MayAlias}}
+{_entry=_entry {%1=Unique, %2=Unique, %arcv=MayAlias}, continue_loop=continue_loop {%1=Unique, %2=Unique, %arcv=MayAlias}, else=else {%1=Unique, %2=Unique, %arcv=MayAlias}, foo=foo {%1=Unique, %2=Unique, %arcv=MayAlias}, if=if {%1=Unique, %2=Unique, %arcv=MayAlias}, loop=loop {%1=Unique, %2=Unique, %arcv=MayAlias}, reta=reta {%1=Unique, %2=Unique, %arcv=MayAlias}, retb=retb {%1=Unique, %2=Unique, %arcv=MayAlias}}
+
+FAILED - alias: llprograms/analysis15.ll: Output differs at labels: _entry in maps
+{_entry=_entry {%1=MayAlias, %arcv=MayAlias, %head=MayAlias, %link=MayAlias, %link2=MayAlias, %next=MayAlias, %next2=MayAlias, %val=MayAlias, %val2=MayAlias}}
+{_entry=_entry {%arcv=MayAlias, %head=MayAlias, %link=MayAlias, %link2=MayAlias, %next=MayAlias, %next2=MayAlias, %val=MayAlias, %val2=MayAlias}}
+
+FAILED - alias: llprograms/analysis14.ll: Output differs at labels: _entry in maps
+{_entry=_entry {%1=Unique, %2=MayAlias, %3=UndefAlias, %4=UndefAlias, %arcv=MayAlias}}
+{_entry=_entry {%1=MayAlias, %2=MayAlias, %arcv=MayAlias}}
+
+FAILED - alias: llprograms/analysis13.ll: Output differs at labels: correct, wrong in maps
+{_entry=_entry {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %arcv=MayAlias, %cmp1=UndefAlias}, correct=correct {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=MayAlias, %arcv=MayAlias, %cmp1=UndefAlias, %cmp2=UndefAlias, %cmp3=UndefAlias, %cmp4=UndefAlias, %cmp5=UndefAlias, %cmp6=UndefAlias}, five=five {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %arcv=MayAlias, %cmp1=UndefAlias, %cmp2=UndefAlias, %cmp3=UndefAlias, %cmp4=UndefAlias, %cmp5=UndefAlias, %cmp6=UndefAlias}, four=four {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %arcv=MayAlias, %cmp1=UndefAlias, %cmp2=UndefAlias, %cmp3=UndefAlias, %cmp4=UndefAlias, %cmp5=UndefAlias}, one=one {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %arcv=MayAlias, %cmp1=UndefAlias, %cmp2=UndefAlias}, three=three {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %arcv=MayAlias, %cmp1=UndefAlias, %cmp2=UndefAlias, %cmp3=UndefAlias, %cmp4=UndefAlias}, two=two {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %arcv=MayAlias, %cmp1=UndefAlias, %cmp2=UndefAlias, %cmp3=UndefAlias}, wrong=wrong {%1=MayAlias, %2=MayAlias, %3=MayAlias, %4=MayAlias, %5=MayAlias, %6=MayAlias, %7=MayAlias, %arcv=MayAlias, %cmp1=MayAlias, %cmp2=MayAlias, %cmp3=MayAlias, %cmp4=MayAlias, %cmp5=MayAlias, %cmp6=UndefAlias}}
+{_entry=_entry {%arcv=MayAlias}, correct=correct {%arcv=MayAlias}, five=five {%arcv=MayAlias}, four=four {%arcv=MayAlias}, one=one {%arcv=MayAlias}, three=three {%arcv=MayAlias}, two=two {%arcv=MayAlias}, wrong=wrong {%arcv=MayAlias}}
+
+FAILED - alias: llprograms/analysis12.ll: Output differs at labels: _entry in maps
+{_entry=_entry {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=UndefAlias, %5=UndefAlias, %6=UndefAlias, %7=UndefAlias, %8=UndefAlias, %9=MayAlias, %arcv=MayAlias}}
+{_entry=_entry {%arcv=MayAlias}}
+
+FAILED - alias: llprograms/analysis11.ll: Output differs at labels: _entry, foo in maps
+{_entry=_entry {%1=UndefAlias, %2=UndefAlias, %3=MayAlias, %argv=MayAlias}, foo=foo {%4=Unique, %5=Unique, %6=MayAlias, %7=MayAlias, %8=UndefAlias, %9=MayAlias, %_store__150=UndefAlias, %_store__151=UndefAlias}}
+{_entry=_entry {%argv=MayAlias}, foo=foo {%4=Unique, %5=Unique}}
+
+FAILED - alias: llprograms/analysis10.ll: Output differs at labels: _entry, else, merge, then in maps
+{_entry=_entry {%1=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=Unique, %5=MayAlias, %6=UndefAlias, %7=Unique, %8=MayAlias, %9=UndefAlias, %_store__153=UndefAlias, %_store__154=UndefAlias, %argv=MayAlias}, else=else {%1=UndefAlias, %12=MayAlias, %13=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=Unique, %5=MayAlias, %6=UndefAlias, %7=Unique, %8=MayAlias, %9=UndefAlias, %_store__153=UndefAlias, %_store__154=UndefAlias, %_store__158=UndefAlias, %argv=MayAlias}, merge=merge {%1=MayAlias, %10=MayAlias, %11=UndefAlias, %12=MayAlias, %13=UndefAlias, %14=MayAlias, %15=UndefAlias, %16=MayAlias, %2=MayAlias, %3=MayAlias, %4=Unique, %5=MayAlias, %6=MayAlias, %7=Unique, %8=MayAlias, %9=MayAlias, %_store__153=MayAlias, %_store__154=MayAlias, %_store__156=UndefAlias, %_store__158=UndefAlias, %argv=MayAlias}, then=then {%1=UndefAlias, %10=MayAlias, %11=UndefAlias, %2=UndefAlias, %3=UndefAlias, %4=Unique, %5=MayAlias, %6=UndefAlias, %7=Unique, %8=MayAlias, %9=UndefAlias, %_store__153=UndefAlias, %_store__154=UndefAlias, %_store__156=UndefAlias, %argv=MayAlias}}
+{_entry=_entry {%4=Unique, %7=Unique, %argv=MayAlias}, else=else {%4=Unique, %7=Unique, %argv=MayAlias}, merge=merge {%4=Unique, %7=Unique, %argv=MayAlias}, then=then {%4=Unique, %7=Unique, %argv=MayAlias}}
+
+FAILED - alias: llprograms/analysis1.ll: Output differs at labels: l1 in maps
+{_entry=_entry {%1=UndefAlias, %2=UndefAlias, %3=Unique, %arcv=MayAlias}, l1=l1 {%1=MayAlias, %2=UndefAlias, %3=Unique, %4=MayAlias, %arcv=MayAlias}}
+{_entry=_entry {%3=Unique, %arcv=MayAlias}, l1=l1 {%3=MayAlias, %4=MayAlias, %arcv=MayAlias}}
+
+dce optimization tests (15/15 points):
+  OK
+constprop analysis tests (15/15 points):
+  OK
+constprop optimization tests (10/10 points):
+  OK
+ll regalloc correctness tests:
+  OK
+oat regalloc correctness tests:
+  OK
+oat regalloc quality tests (35/35 points):
+  OK
+---------------------------------------------------
+Passed: 356/373
+Failed: 17/373
+Score: 85/100 (given)
+       ?/0 (hidden)
